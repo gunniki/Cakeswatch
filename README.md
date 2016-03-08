@@ -1,5 +1,5 @@
 # Cakeswatch
-Cakeswatch is adaptation of Bootswatch for CakePHP themes
+Cakeswatch is adaptation of Bootswatch for CakePHP 3.x themes
 
 ## Installation using git
 
