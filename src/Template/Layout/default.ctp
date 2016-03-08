@@ -18,7 +18,7 @@ $cakeDescription = 'Cakeswatch Theme';
         echo $this->Html->css('bootstrap.min.css');
         echo $this->Html->css('font-awesome.min.css');
         echo $this->Html->css('datatables.min.css');
-        echo $this->Html->css('themes/yeti.css');
+        echo $this->Html->css('themes/flatly.css');
         echo $this->Html->css('custom.min.css');
 
         echo $this->Html->script('jquery.min');
