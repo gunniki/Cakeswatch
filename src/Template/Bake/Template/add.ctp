@@ -13,6 +13,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 use Cake\Utility\Inflector;
+<<<<<<< HEAD
 
 %>
 <div class="row">
@@ -57,3 +58,49 @@ use Cake\Utility\Inflector;
 	</div><!-- /#page-content .col-md-9 -->
 
 </div><!-- /#page-container .row-fluid -->
+=======
+%>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+		<div class="box box-primary">
+			<div class="box-header">
+			<h3 class="box-title"><% printf("<% echo __('%s %s'); %>", Inflector::humanize($action), $singularHumanName); %></h3>
+			</div>
+			<div class="box-body table-responsive">
+
+			<% echo "<% echo \$this->Form->create('{$modelClass}', array('role' => 'form')); %>\n"; %>
+
+				<fieldset>
+
+					<%
+						foreach ($fields as $field) {
+							if (strpos($action, 'add') !== false && $field == $primaryKey) {
+								continue;
+							} elseif (!in_array($field, array('created', 'modified', 'updated'))) {
+								echo "\t\t\t\t\t<div class=\"form-group\">\n";
+								echo "\t\t\t\t\t\t<% echo \$this->Form->input('{$field}', array('class' => 'form-control')); %>\n";
+								echo "\t\t\t\t\t</div><!-- .form-group -->\n";
+							}
+						}
+						if (!empty($associations['hasAndBelongsToMany'])) {
+							foreach ($associations['hasAndBelongsToMany'] as $assocName => $assocData) {
+								echo "\t\t\t\t\t<div class=\"form-group\">\n";
+								echo "\t\t\t\t\t\t\t<% echo \$this->Form->input('{$assocName}');%>\n";
+								echo "\t\t\t\t\t</div><!-- .form-group -->\n";
+							}
+						}
+						echo "\n";
+						echo "\t\t\t\t\t<% echo \$this->Form->submit('Submit', array('class' => 'btn btn-large btn-primary')); %>\n";
+					%>
+
+				</fieldset>
+
+			<% echo "\t\t\t<% echo \$this->Form->end(); %>\n";%>
+
+		</div><!-- /.form -->
+
+	</div><!-- /#page-content .col-md-9 -->
+
+</div><!-- /#page-container .row-fluid -->
+
+>>>>>>> 13fddd40692469f9d47f7e004f575ef470c92051
