@@ -53,18 +53,18 @@ $pk = "\$$singularVar->{$primaryKey[0]}";
 %>
 <nav class="col-lg-2 col-md-3 columns" id="actions-sidebar">
     <div class="btn-group-vertical text-left">
-        <?= $this->Html->link(__('<i class="fa fa-pencil"></i> Edit <%= $singularHumanName %>'), ['action' => 'edit', <%= $pk %>], ['class' => 'btn btn-warning btn-sm', 'title' => 'Edit <%= $singularHumanName %>', 'data-toggle' => 'tooltip', 'escape' => false]) ?> 
-        <?= $this->Form->postLink(__('<i class="fa fa-trash-o"></i> Delete <%= $singularHumanName %>'), ['action' => 'delete', <%= $pk %>], ['class' => 'btn btn-danger btn-sm', 'title' => 'Delete <%= $singularHumanName %>', 'data-toggle' => 'tooltip', 'escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>)]) ?> 
-        <?= $this->Html->link(__('<i class="fa fa-list-alt"></i> List <%= $pluralHumanName %>'), ['action' => 'index'], ['class' => 'btn btn-primary btn-sm', 'title' => 'List <%= $pluralHumanName %>', 'data-toggle' => 'tooltip', 'escape' => false]) ?> 
-        <?= $this->Html->link(__('<i class="fa fa-plus"></i> New <%= $singularHumanName %>'), ['action' => 'add'], ['class' => 'btn btn-success btn-sm', 'title' => 'New <%= $singularHumanName %>', 'data-toggle' => 'tooltip', 'escape' => false]) ?> 
+        <?= $this->Html->link(__('<i class="fa fa-pencil"></i> Edit <%= $singularHumanName %>'), ['action' => 'edit', <%= $pk %>], ['class' => 'btn btn-warning btn-sm', 'title' => 'Edit <%= $singularHumanName %>', 'data-toggle' => 'tooltip', 'escape' => false]) ?>
+        <?= $this->Form->postLink(__('<i class="fa fa-trash-o"></i> Delete <%= $singularHumanName %>'), ['action' => 'delete', <%= $pk %>], ['class' => 'btn btn-danger btn-sm', 'title' => 'Delete <%= $singularHumanName %>', 'data-toggle' => 'tooltip', 'escape' => false, 'confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>)]) ?>
+        <?= $this->Html->link(__('<i class="fa fa-list-alt"></i> List <%= $pluralHumanName %>'), ['action' => 'index'], ['class' => 'btn btn-primary btn-sm', 'title' => 'List <%= $pluralHumanName %>', 'data-toggle' => 'tooltip', 'escape' => false]) ?>
+        <?= $this->Html->link(__('<i class="fa fa-plus"></i> New <%= $singularHumanName %>'), ['action' => 'add'], ['class' => 'btn btn-success btn-sm', 'title' => 'New <%= $singularHumanName %>', 'data-toggle' => 'tooltip', 'escape' => false]) ?>
 <%
     $done = [];
     foreach ($associations as $type => $data) {
         foreach ($data as $alias => $details) {
             if ($details['controller'] !== $this->name && !in_array($details['controller'], $done)) {
 %>
-        <?= $this->Html->link(__('List <%= $this->_pluralHumanName($alias) %>'), ['controller' => '<%= $details['controller'] %>', 'action' => 'index'], ['class' => 'btn btn-default btn-sm', 'title' => 'List <%= $this->_pluralHumanName($alias) %>', 'data-toggle' => 'tooltip', 'escape' => false]) ?> 
-        <?= $this->Html->link(__('New <%= Inflector::humanize(Inflector::singularize(Inflector::underscore($alias))) %>'), ['controller' => '<%= $details['controller'] %>', 'action' => 'add'], ['class' => 'btn btn-default btn-sm', 'title' => 'New <%= Inflector::humanize(Inflector::singularize(Inflector::underscore($alias))) %>', 'data-toggle' => 'tooltip', 'escape' => false]) ?> 
+        <?= $this->Html->link(__('List <%= $this->_pluralHumanName($alias) %>'), ['controller' => '<%= $details['controller'] %>', 'action' => 'index'], ['class' => 'btn btn-default btn-sm', 'title' => 'List <%= $this->_pluralHumanName($alias) %>', 'data-toggle' => 'tooltip', 'escape' => false]) ?>
+        <?= $this->Html->link(__('New <%= Inflector::humanize(Inflector::singularize(Inflector::underscore($alias))) %>'), ['controller' => '<%= $details['controller'] %>', 'action' => 'add'], ['class' => 'btn btn-default btn-sm', 'title' => 'New <%= Inflector::humanize(Inflector::singularize(Inflector::underscore($alias))) %>', 'data-toggle' => 'tooltip', 'escape' => false]) ?>
 <%
                 $done[] = $details['controller'];
             }
@@ -74,7 +74,7 @@ $pk = "\$$singularVar->{$primaryKey[0]}";
     </div>
 </nav>
 <div class="<%= $pluralVar %> view col-lg-10 col-md-9 columns content">
-<div class="panel panel-warning">
+<div class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">Details</h3>
         </div>

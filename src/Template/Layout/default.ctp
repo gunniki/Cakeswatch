@@ -18,7 +18,7 @@ $cakeDescription = 'Cakeswatch Theme';
         echo $this->Html->css('bootstrap.min.css');
         echo $this->Html->css('font-awesome.min.css');
         echo $this->Html->css('datatables.min.css');
-        echo $this->Html->css('themes/flatly.css');
+        echo $this->Html->css('flatly.css');
         echo $this->Html->css('custom.min.css');
 
         echo $this->Html->script('jquery.min');
@@ -35,7 +35,7 @@ $cakeDescription = 'Cakeswatch Theme';
     <![endif]-->
   </head>
   <body>
-  
+
     <?= $this->element('top'); ?>
     <div class="container">
         <div class="bs-docs-section clearfix">
@@ -45,21 +45,18 @@ $cakeDescription = 'Cakeswatch Theme';
             </center>
             <?= $this->fetch('content'); ?>
             </div>
-        </div>   
+        </div>
     <?= $this->element('footer'); ?>
     </div>
-        
-   
+
+
 
     <?php
-      
+
       echo $this->Html->script('bootstrap.min');
       echo $this->Html->script('main');
-     
+
     ?>
 
   </body>
 </html>
-
-
-

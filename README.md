@@ -4,14 +4,13 @@ Cakeswatch is adaptation of Bootswatch for CakePHP 3.x themes
 ## Installation using git
 
 ```
-cd $APP
+cd my_app_name
 git clone git://github.com/sherwinrobles/Cakeswatch plugins/Cakeswatch
-make
 ```
 
 ## Manual installation
 
-Download and extract file inside plugins/
+Download and extract file inside my_app_name/plugins/
 
 
 ## Load plugin and use the theme
@@ -35,7 +34,7 @@ public function initialize()
 To use the different bootswatch themes. In your plugins/Cakeswatch/src/Template/Layout/default.ctp change the css name of bootswatch theme you want to use.
 
 ```
-echo $this->Html->css('themes/flatly.css');
+echo $this->Html->css('flatly.css');
 
 ```
 
