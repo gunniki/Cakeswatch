@@ -74,7 +74,7 @@ $pk = "\$$singularVar->{$primaryKey[0]}";
     </div>
 </nav>
 <div class="<%= $pluralVar %> view col-lg-10 col-md-9 columns content">
-<div class="panel panel-warning">
+<div class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">Details</h3>
         </div>
