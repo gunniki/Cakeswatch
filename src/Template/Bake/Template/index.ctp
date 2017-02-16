@@ -46,7 +46,7 @@ if (isset($modelObject) && $modelObject->behaviors()->has('Tree')) {
     </div>
 </nav>
 <div class="<%= $pluralVar %> index col-lg-10 col-md-9 content">
-    <div class="panel panel-warning">
+    <div class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title"><?= __('<%= $pluralHumanName %>') ?></h3>
         </div>
