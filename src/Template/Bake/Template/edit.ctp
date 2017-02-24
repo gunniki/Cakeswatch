@@ -56,5 +56,3 @@
  	</div><!-- /#page-content .col-sm-9 -->
 
  </div><!-- /#page-container .row-fluid -->
-
-%>
