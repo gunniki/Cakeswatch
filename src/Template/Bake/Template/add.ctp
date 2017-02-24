@@ -57,4 +57,3 @@ use Cake\Utility\Inflector;
 
 </div><!-- /#page-container .row-fluid -->
 
-%>
