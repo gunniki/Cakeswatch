@@ -12,7 +12,6 @@
  * @since         0.1.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-<<<<<<< HEAD
  use Cake\Utility\Inflector;
  %>
  <div class="row">
@@ -57,8 +56,7 @@
  	</div><!-- /#page-content .col-sm-9 -->
 
  </div><!-- /#page-container .row-fluid -->
-=======
-use Cake\Utility\Inflector;
+
 %>
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
@@ -102,5 +100,3 @@ use Cake\Utility\Inflector;
 	</div><!-- /#page-content .col-md-9 -->
 
 </div><!-- /#page-container .row-fluid -->
-
->>>>>>> 13fddd40692469f9d47f7e004f575ef470c92051
