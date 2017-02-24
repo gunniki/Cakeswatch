@@ -16,11 +16,11 @@
  %>
  <div class="row">
      <div class="col-md-6 col-md-offset-3">
- 		<div class="box box-primary">
- 			<div class="box-header">
- 			<h3 class="box-title"><% printf("<% echo __('%s %s'); %>", Inflector::humanize($action), $singularHumanName); %></h3>
+ 		<div class="panel panel-primary">
+ 			<div class="panel-heading">
+ 			<h3 class="panel-title"><% printf("<% echo __('%s %s'); %>", Inflector::humanize($action), $singularHumanName); %></h3>
  			</div>
- 			<div class="box-body table-responsive">
+ 			<div class="panel-body table-responsive">
 
  			<% echo "<% echo \$this->Form->create('{$modelClass}', array('role' => 'form')); %>\n"; %>
 
