@@ -20,7 +20,7 @@ use Cake\Utility\Inflector;
 			<div class="panel-heading">
 			<h3 class="panel-title"><% printf("<% echo __('%s %s'); %>", Inflector::humanize($action), $singularHumanName); %></h3>
 			</div>
-			<div class="box-body table-responsive">
+			<div class="panel-body table-responsive">
 
 			<% echo "<% echo \$this->Form->create('{$modelClass}', array('role' => 'form')); %>\n"; %>
 
